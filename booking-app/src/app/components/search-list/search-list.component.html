@@ -1,1 +1,80 @@
-<p>search-list works!</p>
+<div class="container">
+    <app-map></app-map>
+    <main class="filter-search-wrapper">
+        <section class="filters-wrapper" aria-label="filters-wrapper">
+            <div class="filter-title-wrapper">
+                <h3 class="filter-title">Filter by:</h3>
+            </div>
+            <div class="filter-wrapper">
+                <h2>Your budget (per night)</h2>
+                <mat-slider min="200" max="500">
+                    <input value="300" matSliderStartThumb>
+                    <input value="400" matSliderEndThumb>
+                </mat-slider>
+                <p>AMD1000 - AMD40,000</p>
+            </div>
+            <section class="example-section" [formGroup]="">
+                <h4>Select your toppings:</h4>
+                <p><mat-checkbox formControlName="">Pepperoni</mat-checkbox></p>
+                <p><mat-checkbox formControlName="">Extra Cheese</mat-checkbox></p>
+                <p><mat-checkbox formControlName="">Mushroom</mat-checkbox></p>
+              </section>
+            <div class="filter-wrapper">
+                <h3 class="filter-subtitle">Facilities</h3>
+                <input type="checkbox" name="" id="">
+                <input type="checkbox" name="" id="">
+                <input type="checkbox" name="" id="">
+                <input type="checkbox" name="" id="">
+            </div>
+            <div class="filter-wrapper">
+                <h3 class="filter-subtitle">Property Type</h3>
+                <input type="checkbox" name="" id="">
+                <input type="checkbox" name="" id="">
+                <input type="checkbox" name="" id="">
+                <input type="checkbox" name="" id="">
+            </div>
+            <div class="filter-wrapper">
+                <h3 class="filter-subtitle">Property rating</h3>
+                <input type="checkbox" name="" id="">
+                <input type="checkbox" name="" id="">
+                <input type="checkbox" name="" id="">
+                <input type="checkbox" name="" id="">
+            </div>
+            <div class="filter-wrapper">
+                <h3 class="filter-subtitle">Review Score</h3>
+                <input type="checkbox" name="" id="">
+                <input type="checkbox" name="" id="">
+                <input type="checkbox" name="" id="">
+                <input type="checkbox" name="" id="">
+            </div>
+            <div class="filter-wrapper">
+                <h3 class="filter-subtitle">Distance from downtown</h3>
+                <input type="checkbox" name="" id="">
+                <input type="checkbox" name="" id="">
+                <input type="checkbox" name="" id="">
+                <input type="checkbox" name="" id="">
+            </div>
+            <div class="filter-wrapper">
+                <h3 class="filter-subtitle">Fun Things To Do</h3>
+                <input type="checkbox" name="" id="">
+                <input type="checkbox" name="" id="">
+                <input type="checkbox" name="" id="">
+                <input type="checkbox" name="" id="">
+            </div>  
+            <div class="filter-wrapper">
+                <h3 class="filter-subtitle">Room Accessibility</h3>
+                <input type="checkbox" name="" id="">
+                <input type="checkbox" name="" id="">
+                <input type="checkbox" name="" id="">
+                <input type="checkbox" name="" id="">
+            </div>
+        </section>
+        <section class="search-list-wrapper" aria-label="search-list-wrapper">
+            <div class="search-list"  *ngFor="let item of searchList">
+
+
+
+            </div>
+        </section>
+    </main>
+</div>

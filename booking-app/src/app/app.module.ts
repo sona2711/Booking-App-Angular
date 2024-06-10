@@ -11,6 +11,18 @@ import { BookingFormComponent } from './components/booking-form/booking-form.com
 import { ErrorComponent } from './components/error/error.component';
 import { AccountComponent } from './components/account/account.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { MapComponent } from './components/map/map.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatFormFieldModule} from  '@angular/material/form-field';
+import {FormsModule} from '@angular/forms';
+import {ReactiveFormsModule} from '@angular/forms';
+import {MatSliderModule} from '@angular/material/slider';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+
+
+ // imports: [ MatDatepickerModule, FormsModule, ReactiveFormsModule, JsonPipe],
 
 @NgModule({
   declarations: [
@@ -22,14 +34,23 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
     BookingFormComponent,
     ErrorComponent,
     AccountComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatTabsModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatSliderModule,
+    MatCheckboxModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })
